@@ -1,14 +1,14 @@
 # elm-release
  饿了么吃货豆工具
  
- ![GitHub Repo stars](https://img.shields.io/github/stars/zelang/elm-release)
- ![GitHub release (latest by date)](https://img.shields.io/github/downloads/zelang/elm-release/latest/total)
+ ![GitHub Repo stars](https://img.shields.io/github/stars/hicongcn/elm-release)
+ ![GitHub release (latest by date)](https://img.shields.io/github/downloads/hicongcn/elm-release/latest/total)
 
-![elm.png](https://raw.githubusercontent.com/zelang/elm-release/main/elm.png)
+![elm.png](https://raw.githubusercontent.com/hicongcn/elm-release/main/elm.png)
 
 # 使用说明
 
-1. 请在 [Releases](https://github.com/zelang/elm-release/releases) 根据你的设备下载二进制文件
+1. 请在 [Releases](https://github.com/hicongcn/elm-release/releases) 根据你的设备下载二进制文件
 2. 解压文件
 3. 修改config.yaml配置文件(注意格式 - auth: 后面有个空格)
 4. 可选参数 -debug 将日志输出到本目录下的文件，方便调试 -task 手动执行任务 (默认执行定时任务，需要将程序挂在后台)

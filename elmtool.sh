@@ -23,7 +23,7 @@ check_install() {
   if [ ! -d "${cur_dir}/elmtool" ]; then
     echo -e "[INFO] 检测到当前未安装ElmTool，即将下载二进制文件"
     mkdir -p elmtool && cd elmtool || exit
-    wget https://ghproxy.com/https://github.com/zelang/elm-release/releases/download/"${new_version:0:3}"/elm-"${new_version}"-linux-${arch}.tar.gz
+    wget https://ghproxy.com/https://github.com/hicongcn/elm-release/releases/download/"${new_version:0:3}"/elm-"${new_version}"-linux-${arch}.tar.gz
     # shellcheck disable=SC2181
     if [ $? -ne 0 ]; then
       echo -e "[Error] 下载二进制文件失败，请检查网络或重新执行本脚本" && exit 2
@@ -37,7 +37,7 @@ update_soft() {
     cd "${cur_dir}" || exit
     echo -e "[INFO] 检测到当前已安装ElmTool，即将下载更新二进制文件"
     mkdir -p tmp && cd tmp || exit
-    wget https://ghproxy.com/https://github.com/zelang/elm-release/releases/download/"${new_version:0:3}"/elm-"${new_version}"-linux-${arch}.tar.gz >/dev/null 2>&1
+    wget https://ghproxy.com/https://github.com/hicongcn/elm-release/releases/download/"${new_version:0:3}"/elm-"${new_version}"-linux-${arch}.tar.gz >/dev/null 2>&1
     # shellcheck disable=SC2181
     if [ $? -ne 0 ]; then
       echo -e "[Error] 下载二进制文件失败，请检查网络或重新执行本脚本" && cd .. && rm -rf tmp && exit 2
@@ -48,7 +48,7 @@ update_soft() {
   fi
 }
 check_update() {
-  new_version=$(curl -s "https://fastly.jsdelivr.net/gh/zelang/elm-release@main/version")
+  new_version=$(curl -s "https://fastly.jsdelivr.net/gh/hicongcn/elm-release@main/version")
   if [[ !${new_version} =~ [:digit:].[:digit:].[:digit:] ]];then
     echo -e "[Error] 当前版本获取失败，请尝试更改本脚本51行获取版本地址链接"
     exit 0
